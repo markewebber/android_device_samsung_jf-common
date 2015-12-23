@@ -43,6 +43,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CONFIG := cyanogen_jf_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_SOURCE := kernel/samsung/jf
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-a15-linaro4.9-a15/bin/arm-cortex_a15-linux-gnueabi-
 
 # Audio
 BOARD_HAVE_AUDIENCE_ES325_2MIC := true
