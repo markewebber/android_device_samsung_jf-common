@@ -28,6 +28,7 @@ COMMON_PATH := device/samsung/jf-common
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno320
+USE_CLANG_PLATFORM_BUILD := true
 
 # Architecture
 TARGET_CPU_VARIANT := krait
@@ -67,7 +68,6 @@ BOARD_BLUEDROID_VENDOR_CONF := $(COMMON_PATH)/bluetooth/vnd_jf.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
@@ -130,6 +130,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
+USE_DEVICE_SPECIFIC_DATASERVICES := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
