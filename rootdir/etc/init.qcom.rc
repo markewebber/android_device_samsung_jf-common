@@ -313,7 +313,6 @@ service cnd /system/bin/cnd
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    disabled
 
 on property:ro.boot.emmc=true
     start rmt_storage
@@ -357,7 +356,7 @@ on property:ro.baseband="msm"
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
-    user radio
+    user root
     group radio audio bluetooth gps qcom_diag log
 
 service netmgrd /system/bin/netmgrd
