@@ -84,7 +84,6 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_HARDWARE_CLASS += $(COMMON_PATH)/cmhw
 
 # Display
-BOARD_USES_LEGACY_MMAP := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
@@ -114,6 +113,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+
+# Properties (reset them here, include more in device if needed)
+TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
